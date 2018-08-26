@@ -1,0 +1,69 @@
+#Tomcat配置
+server:
+  tomcat:
+    port: 8080
+    uri-encoding: UTF-8
+    #contextPath: /test
+    #accept-count: 200
+    #max-connections: 1000
+    #max-threads: 200
+
+#Actuator监控配置
+security:
+  user:
+    name: lizy
+    password: "lzy928"
+    role: ACTUATOR
+management:
+    security:
+      enabled: true
+      roles: ACTUATOR
+endpoints:
+    jmx:
+
+#系统配置
+spring:
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    suffix: .html
+    check-template-location: true
+    content-type: text/html
+    mode: LEGACYHTML5
+    #配置静态资源
+    resources:
+      static-locations: classpath:/static/,classpath:/templates/
+    http:
+      encoding:
+          force: true
+          charset: UTF-8
+          enabled: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/htht?useUnicode=true&characterEncoding=utf8
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: "123456"
+    password_encrypted: "true"
+    driverClassName: com.mysql.jdbc.Driver
+    maxActive: 30
+    minIdle : 10
+    maxWait: 1000
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    keepAlive: true
+    minEvictableIdleTimeMillis: 60000
+    validationQuery: "SELECT 'x' FROM DUAL"
+    testWhileIdle: true
+    filters: "stat"
+
+druid:
+      stat_username: lizy
+      stat_password: "lzy928"
+
+instanceid: default
+
+debug: true
+logging:
+  level: debug
