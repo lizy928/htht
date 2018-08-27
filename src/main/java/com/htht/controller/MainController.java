@@ -39,7 +39,7 @@ public class MainController {
 
     @RequestMapping("/test2")
     public String index(){
-        return "index";
+        return "news";
     }
 
 }

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<title>苏州恒峰不锈钢有限公司</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=1200,user-scalable=yes">
-		<link rel="stylesheet" type="text/css" href="static/css/owl.carousel.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/owl.theme.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/main.css"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/owl.carousel.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/owl.theme.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/reset.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
 	</head>
 	<body>
 		<!--nav-->
@@ -19,7 +19,7 @@
 		</div>
 		<div class="nav clearfix">
 			<div class="logo">
-				<img src="static/images/logo.png" />
+				<img th:src="@{/images/logo.png}" />
 			</div>
 			<ul>
 				<li><a href="index.html">网站首页</a></li>
@@ -47,9 +47,9 @@
 		</div>
 		<!--banner-->
 		<div id="owl" class="owl-carousel">
-			<a class="item"><img src="static/images/banner/banner1.jpg" alt=""></a>
-			<a class="item"><img src="static/images/banner/banner3.jpg" alt=""></a>
-			<a class="item"><img src="static/images/banner/banner2.jpg" alt=""></a>
+			<a class="item"><img th:src="@{/images/banner/banner1.jpg}" alt=""></a>
+			<a class="item"><img th:src="@{/images/banner/banner3.jpg}" alt=""></a>
+			<a class="item"><img th:src="@{/images/banner/banner2.jpg}" alt=""></a>
 		</div>
 		
 		<div class="pg clearfix">
@@ -126,10 +126,10 @@
 				</div>
 			</div>
 		</div>
-		
-		
-		<script src="static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="static/js/owl.carousel.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="static/js/main.js" type="text/javascript" charset="utf-8"></script>
+
+
+		<script th:src="@{/js/jquery.min.js}" type="text/javascript" charset="utf-8"></script>
+		<script th:src="@{/js/owl.carousel.min.js}" type="text/javascript" charset="utf-8"></script>
+		<script th:src="@{/js/main.js}" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

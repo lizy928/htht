@@ -1,25 +1,25 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
-		<title>苏州恒峰不锈钢有限公司</title>
+		<title>北京汇通制冷设备维修有限公司</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=1200,user-scalable=yes">
-		<link rel="stylesheet" type="text/css" href="static/css/owl.carousel.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/owl.theme.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/main.css"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/owl.carousel.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/owl.theme.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/reset.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
 	</head>
 	<body>
 		<!--nav-->
 		<div class="top ">
 			<div class="clearfix">
-				<p class="flr">苏州恒峰不锈钢有限公司</p>
+				<p class="flr">北京汇通制冷设备维修有限公司</p>
 				<p class="fll">联系电话：67572586 </p>
 			</div>
 		</div>
 		<div class="nav clearfix">
 			<div class="logo">
-				<img src="static/images/logo.png" />
+				<img th:src="@{/images/logo.png}" />
 			</div>
 			<ul>
 				<li><a href="index.html">网站首页</a></li>
@@ -47,9 +47,9 @@
 		</div>
 		<!--banner-->
 		<div id="owl" class="owl-carousel">
-			<a class="item"><img src="static/images/banner/banner1.jpg" alt=""></a>
-			<a class="item"><img src="static/images/banner/banner3.jpg" alt=""></a>
-			<a class="item"><img src="static/images/banner/banner2.jpg" alt=""></a>
+			<a class="item"><img th:src="@{/images/banner/banner1.jpg}" alt=""></a>
+			<a class="item"><img th:src="@{/images/banner/banner3.jpg}" alt=""></a>
+			<a class="item"><img th:src="@{/images/banner/banner2.jpg}" alt=""></a>
 		</div>
 		
 		<div class="products">
@@ -63,7 +63,7 @@
 					<li>
 						<a href="products-detail.html"> 
 							<div>
-								<img src="static/images/products/pro1.jpg"/>
+								<img th:src="@{/images/products/pro1.jpg}"/>
 							</div>
 							<p>无缝钢管系列01</p>
 						</a>
@@ -71,7 +71,7 @@
 					<li>
 						<a href="products-detail.html"> 
 							<div>
-								<img src="static/images/products/pro2.jpg"/>
+								<img th:src="@{/images/products/pro2.jpg}"/>
 							</div>
 							<p>无缝钢管系列02</p>
 						</a>
@@ -79,7 +79,7 @@
 					<li>
 						<a href="products-detail.html"> 
 							<div>
-								<img src="static/images/products/pro3.jpg"/>
+								<img th:src="@{/images/products/pro3.jpg}"/>
 							</div>
 							<p>无缝钢管系列03</p>
 						</a>
@@ -87,7 +87,7 @@
 					<li>
 						<a href="products-detail.html"> 
 							<div>
-								<img src="static/images/products/pro4.jpg"/>
+								<img th:src="@{/images/products/pro4.jpg}"/>
 							</div>
 							<p>无缝钢管系列04</p>
 						</a>
@@ -95,7 +95,7 @@
 					<li>
 						<a href="products-detail.html"> 
 							<div>
-								<img src="static/images/products/pro5.jpg"/>
+								<img th:src="@{/images/products/pro5.jpg}"/>
 							</div>
 							<p>无缝钢管系列05</p>
 						</a>
@@ -103,7 +103,7 @@
 					<li>
 						<a href="products-detail.html"> 
 							<div>
-								<img src="static/images/products/pro6.jpg"/>
+								<img th:src="@{/images/products/pro6.jpg}"/>
 							</div>
 							<p>无缝钢管系列06</p>
 						</a>
@@ -111,7 +111,7 @@
 					<li>
 						<a href="products-detail.html"> 
 							<div>
-								<img src="static/images/products/pro7.jpg"/>
+								<img th:src="@{/images/products/pro7.jpg}"/>
 							</div>
 							<p>无缝钢管系列07</p>
 						</a>
@@ -119,7 +119,7 @@
 					<li>
 						<a href="products-detail.html"> 
 							<div>
-								<img src="static/images/products/pro8.jpg"/>
+								<img th:src="@{/images/products/pro8.jpg}"/>
 							</div>
 							<p>无缝钢管系列08</p>
 						</a>
@@ -146,12 +146,12 @@
 						</p>
 					</div>
 					<div>
-						<img src="static/images/advantage/ad1.jpg" />
+						<img th:src="@{/images/advantage/ad1.jpg}" />
 					</div>
 				</li>
 				<li>
 					<div>
-						<img src="static/images/advantage/ad2.jpg" />
+						<img th:src="@{/images/advantage/ad2.jpg}" />
 					</div>
 					<div>
 						<h3>检测设备</h3>
@@ -168,7 +168,7 @@
 						</p>
 					</div>
 					<div>
-						<img src="static/images/advantage/ad3.jpg" />
+						<img th:src="@{/images/advantage/ad3.jpg}" />
 					</div>
 				</li>
 			</ul>
@@ -182,7 +182,7 @@
 				</div>
 				<div class="news-list-index clearfix">
 					<div class="news-gs">
-						<img src="static/images/news/news1.jpg" />
+						<img th:src="@{/images/news/news1.jpg}" />
 					</div>
 					<div class="news-hy">
 						<div class="news-title">
@@ -238,8 +238,8 @@
 		</div>
 		
 		
-		<script src="static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="static/js/owl.carousel.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="static/js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script th:src="@{/js/jquery.min.js}" type="text/javascript" charset="utf-8"></script>
+		<script th:src="@{/js/owl.carousel.min.js}" type="text/javascript" charset="utf-8"></script>
+		<script th:src="@{/js/main.js}" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>
