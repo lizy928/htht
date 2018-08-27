@@ -1,19 +1,28 @@
- create database htht;
- use htht;
+create database htht;
+use htht;
 
 CREATE TABLE `product` (
   `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `type` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `type` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 DEFAULT '',
   `desc` text CHARACTER SET utf8,
   `image` varchar(255) CHARACTER SET utf8 DEFAULT ''
 ) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
 
+
 CREATE TABLE `news` (
   `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `type` int(2) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `type` int(2) NOT NULL,
   `title` varchar(255) CHARACTER SET utf8 DEFAULT '',
   `content` text CHARACTER SET utf8,
+  `create_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
+
+
+CREATE TABLE `message` (
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) CHARACTER SET utf8 DEFAULT '',
+  `mobile` varchar(50) CHARACTER SET utf8 DEFAULT '',
   `content` text CHARACTER SET utf8,
-  `create_time` datetime DEFAULT now(),
+  `create_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
