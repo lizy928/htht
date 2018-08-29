@@ -1,6 +1,7 @@
 package com.htht.dao;
 
 import com.htht.entity.News;
+import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -19,4 +20,6 @@ public interface NewsDao {
     void updateNews(@Param("news") News news);
 
     void deleteNewsById(@Param("Id") int Id);
+
+    void add(@Param("news") News news);
 }

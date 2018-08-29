@@ -2,11 +2,8 @@
   <library name="Gradle: org.springframework:spring-beans:4.3.12.RELEASE">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.12.RELEASE/spring-beans-4.3.12.RELEASE.jar!/" />
-      <root url="jar://$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.12.RELEASE/547dd432d47d0f01d9ccbedc4b705f9f7c1240a/spring-beans-4.3.12.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.12.RELEASE/afe9285e063739083bc9ea986731901f9a216fce/spring-beans-4.3.12.RELEASE-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

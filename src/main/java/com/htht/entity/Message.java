@@ -19,5 +19,5 @@ public class Message {
       private String name;
       private String mobile;
       private String content;
-      private Date create_time;
+      private Date createTime;
 }

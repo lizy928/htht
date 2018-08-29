@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.htht.dao.MessageDao">
+
+    <insert id="add" parameterType="com.htht.entity.Message">
+        INSERT INTO
+        message(id, name, mobile, content, create_time)
+        VALUES (#{message.Id}, #{message.name}, #{message.mobile}, #{message.content}, #{message.createTime})
+    </insert>
+
+    <update id="updateMessage" parameterType="com.htht.entity.Message">
+        update
+        Message set
+        id = #{message.Id}, name = #{message.name}, mobile = #{message.mobile},
+        content = #{message.content}, create_time = #{message.createTime}
+    </update>
+
+    <delete id="deleteMessageById">
+        delete from message where id = #{Id}
+    </delete>
+
+    <select id="getAll" resultType="com.htht.entity.News">
+         SELECT * FROM message;
+    </select>
+
+    <select id="getMessageById" resultType="com.htht.entity.News">
+          SELECT * FROM message WHERE id = #{Id}
+    </select>
+
+
+</mapper>

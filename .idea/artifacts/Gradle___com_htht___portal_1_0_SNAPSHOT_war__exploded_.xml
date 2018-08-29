@@ -49,12 +49,14 @@
           <element id="library" level="project" name="Gradle: org.thymeleaf:thymeleaf-spring4:2.1.5.RELEASE" />
           <element id="library" level="project" name="Gradle: nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:1.4.0" />
           <element id="library" level="project" name="Gradle: xerces:xercesImpl:2.11.0" />
-          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.5.8.RELEASE" />
+          <element id="library" level="project" name="Gradle: junit:junit:4.12" />
+          <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-core:1.3" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-jdbc:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-tx:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-expression:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.3.12.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.5.8.RELEASE" />
           <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.17" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:8.5.23" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:8.5.23" />
@@ -79,22 +81,20 @@
           <element id="library" level="project" name="Gradle: org.javassist:javassist:3.21.0-GA" />
           <element id="library" level="project" name="Gradle: org.unbescape:unbescape:1.1.0.RELEASE" />
           <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.1.11" />
-          <element id="library" level="project" name="Gradle: junit:junit:4.12" />
-          <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-core:1.3" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/1.5.8.RELEASE/20b767f594924b32950286f1236ab7d68ff861f9/spring-boot-starter-test-1.5.8.RELEASE.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/1.5.8.RELEASE/a8f986cc4b6ecef1417fe50c20984f12f54d15cc/spring-boot-test-autoconfigure-1.5.8.RELEASE.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/1.5.8.RELEASE/17dedee86d1a9e9bd409d715fd90650ca1049659/spring-boot-test-1.5.8.RELEASE.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.2.0/22290d17944bd239fabf5ac69005a60a7ecbbbcb/json-path-2.2.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.assertj/assertj-core/2.6.0/b532c3fc4f66bcfee4989a3514f1cd56203a33ad/assertj-core-2.6.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.mockito/mockito-core/1.10.19/e8546f5bef4e061d8dd73895b4e8f40e3fe6effe/mockito-core-1.10.19.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.hamcrest/hamcrest-library/1.3/4785a3c21320980282f9f33d0d1264a69040538f/hamcrest-library-1.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.skyscreamer/jsonassert/1.4.0/9cdbb373a06f6513e51e8c545ee6a5e981463edb/jsonassert-1.4.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.springframework/spring-test/4.3.12.RELEASE/825a7ac1014528db722a6cc94cceaef2410cb314/spring-test-4.3.12.RELEASE.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/net.minidev/json-smart/2.2.1/5b9e5df7a62d1279b70dc882b041d249c4f0b002/json-smart-2.2.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/87c0ea803b69252868d09308b4618f766f135a96/objenesis-2.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/net.minidev/accessors-smart/1.1/a527213f2fea112a04c9bdf0ec0264e34104cd08/accessors-smart-1.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.ow2.asm/asm/5.0.3/dcc2193db20e19e1feca8b1240dbbc4e190824fa/asm-5.0.3.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/1.5.8.RELEASE/spring-boot-starter-test-1.5.8.RELEASE.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test-autoconfigure/1.5.8.RELEASE/spring-boot-test-autoconfigure-1.5.8.RELEASE.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test/1.5.8.RELEASE/spring-boot-test-1.5.8.RELEASE.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/jayway/jsonpath/json-path/2.2.0/json-path-2.2.0.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/assertj/assertj-core/2.6.0/assertj-core-2.6.0.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/skyscreamer/jsonassert/1.4.0/jsonassert-1.4.0.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.12.RELEASE/spring-test-4.3.12.RELEASE.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/net/minidev/json-smart/2.2.1/json-smart-2.2.1.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.1/objenesis-2.1.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/net/minidev/accessors-smart/1.1/accessors-smart-1.1.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar" />
         </element>
       </element>
     </root>

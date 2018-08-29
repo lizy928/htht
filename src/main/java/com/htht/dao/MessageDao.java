@@ -1,5 +1,6 @@
 package com.htht.dao;
 
+import com.htht.entity.Message;
 import com.htht.entity.News;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -16,7 +17,9 @@ public interface MessageDao {
 
     News getMessageById(@Param("Id") int Id);
 
-    void updateMessage(@Param("news") News news);
+    void updateMessage(@Param("message")Message message);
 
     void deleteMessageById(@Param("Id") int Id);
+
+    void add(@Param("message") Message message);
 }
