@@ -35,7 +35,7 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version:'1.4.0.RELEASE'
     compile group: 'net.sourceforge.nekohtml', name: 'nekohtml', version: '1.9.22'
     compile group: 'org.springframework.boot', name: 'spring-boot-devtools'
-
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
 }
 
 buildscript {

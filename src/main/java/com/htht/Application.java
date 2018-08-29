@@ -1,5 +1,6 @@
 package com.htht;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -15,10 +16,9 @@ import org.springframework.context.annotation.Configuration;
  * @desc 核心启动类
  **/
 
-@Configuration
 @SpringBootApplication
-@EnableAutoConfiguration
 @ComponentScan(basePackages = "com.htht.*")
+@MapperScan("com.htht.dao")
 public class Application {
 
     private static final Class<Application> applicationClass = Application.class;

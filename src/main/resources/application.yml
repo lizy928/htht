@@ -41,9 +41,9 @@ spring:
           enabled: true
 
   datasource:
-    url: jdbc:mysql://localhost:3306/htht?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://43.226.35.137:3306/htht?useUnicode=true&characterEncoding=utf8
     type: com.alibaba.druid.pool.DruidDataSource
-    username: root
+    username: test
     password: "123456"
     password_encrypted: "true"
     driverClassName: com.mysql.jdbc.Driver
@@ -58,6 +58,7 @@ spring:
     testWhileIdle: true
     filters: "stat"
 
+
 druid:
       stat_username: lizy
       stat_password: "lzy928"
@@ -67,3 +68,7 @@ instanceid: default
 debug: true
 logging:
   level: debug
+
+mybatis:
+  type-aliases-package: com.htht.entity
+  mapper-locations: classpath:Mapper/*.xml
