@@ -1,6 +1,9 @@
 package com.htht.controller;
 
 import com.htht.entity.User;
+import com.htht.service.NewsService;
+import com.htht.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,25 +18,20 @@ import java.util.List;
  * @create 2018-08-11 23:39
  * @desc
  **/
-@RequestMapping("/test")
+@RequestMapping("main")
 @Controller
 public class MainController {
 
-    @RequestMapping(value = "test")
-    public Object test(Model model){
+    @Autowired
+    private ProductService productService;
 
-        User user1 = new User();
-        user1.setId(001);
-        user1.setName("李白");
-        user1.setPassword("1230");
-        User user2 = new User();
-        user2.setId(002);
-        user2.setName("露娜");
-        user2.setPassword("1230");
-        List list = new ArrayList();
-        list.add(user1);
-        list.add(user2);
-        model.addAttribute("list",list);
+    @Autowired
+    private NewsService newsService;
+
+    @RequestMapping(value = "homePage")
+    public Object homePage(Model model){
+        model.addAttribute("productList",productService.getAll());
+        model.addAttribute("newsList",newsService.getAll());
         return "index";
     }
 
@@ -41,7 +39,5 @@ public class MainController {
     public String index(){
         return "news";
     }
-
-
 
 }

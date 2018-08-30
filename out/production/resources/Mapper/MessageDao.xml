@@ -19,11 +19,11 @@
         delete from message where id = #{Id}
     </delete>
 
-    <select id="getAll" resultType="com.htht.entity.News">
+    <select id="getAll" resultType="com.htht.entity.Message">
          SELECT * FROM message;
     </select>
 
-    <select id="getMessageById" resultType="com.htht.entity.News">
+    <select id="getMessageById" resultType="com.htht.entity.Message">
           SELECT * FROM message WHERE id = #{Id}
     </select>
 

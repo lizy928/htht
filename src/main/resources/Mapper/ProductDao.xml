@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.htht.dao.ProductDao">
+
+    <insert id="add" parameterType="com.htht.entity.Product">
+        INSERT INTO
+        product(id, type, name, desc, image)
+        VALUES (#{product.Id}, #{product.type}, #{product.name},#{product.desc}, #{product.image})
+    </insert>
+
+    <update id="updateProduct" parameterType="com.htht.entity.Product">
+        update
+        product set
+        id = #{Id}, type = #{type}, name = #{name}, desc = #{desc}, image = #{image}
+    </update>
+
+    <delete id="deleteProductById">
+        delete from product where id = #{Id}
+    </delete>
+
+    <select id="getAll" resultType="com.htht.entity.Product">
+        select * from product;
+    </select>
+
+    <select id="getProductById" resultType="com.htht.entity.Product">
+        select * from product where id = #{Id}
+    </select>
+
+</mapper>

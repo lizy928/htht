@@ -2,8 +2,11 @@
   <library name="Gradle: org.springframework:spring-test:4.3.12.RELEASE">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.12.RELEASE/spring-test-4.3.12.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.springframework/spring-test/4.3.12.RELEASE/825a7ac1014528db722a6cc94cceaef2410cb314/spring-test-4.3.12.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/公共的/opt/gradle-4.8.1-all/caches/modules-2/files-2.1/org.springframework/spring-test/4.3.12.RELEASE/43de2c286eea90f6a33835264a3f174a87aafd26/spring-test-4.3.12.RELEASE-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

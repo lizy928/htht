@@ -13,9 +13,9 @@ import java.util.List;
 @Mapper
 public interface MessageDao {
 
-    List<News> getAll();
+    List<Message> getAll();
 
-    News getMessageById(@Param("Id") int Id);
+    Message getMessageById(@Param("Id") int Id);
 
     void updateMessage(@Param("message")Message message);
 
