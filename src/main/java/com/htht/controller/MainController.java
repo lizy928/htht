@@ -1,17 +1,11 @@
 package com.htht.controller;
 
-import com.htht.entity.User;
 import com.htht.service.NewsService;
 import com.htht.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author 李正元
@@ -39,5 +33,7 @@ public class MainController {
     public String index(){
         return "news";
     }
+
+
 
 }
