@@ -4,10 +4,10 @@
 		<title>苏州恒峰不锈钢有限公司</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=1200,user-scalable=yes">
-		<link rel="stylesheet" type="text/css" href="static/css/owl.carousel.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/owl.theme.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="static/css/main.css"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/owl.carousel.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/owl.theme.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/reset.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
 	</head>
 	<body>
 		<!--nav-->
@@ -19,12 +19,12 @@
 		</div>
 		<div class="nav clearfix">
 			<div class="logo">
-				<img src="static/images/logo.png" />
+				<img th:src="@{/images/logo.png}" />
 			</div>
 			<ul>
-				<li><a href="index.html">网站首页</a></li>
+				<li><a href="/main/homePage">网站首页</a></li>
 				<li>
-					<a href="products.html">产品中心</a>
+					<a href="/main/allProduct">产品中心</a>
 					<ul class="dropdown">
 						<li><a href="products.html">不锈钢无缝管系列</a></li>
 						<li><a href="products1.html">不锈钢管配件系列</a></li>
@@ -33,23 +33,23 @@
 					</ul>
 				</li>
 				<li>
-					<a href="news.html">新闻资讯</a>
+					<a href="/main/allNews">新闻资讯</a>
 					<ul class="dropdown">
 						<li><a href="news.html">行业资讯</a></li>
 						<li><a href="news-gs.html">公司新闻</a></li>
 					</ul>
 				</li>
 				<li>
-					<a href="about.html">关于我们</a>
+					<a href="/main/aboutUs">关于我们</a>
 				</li>
-				<li><a href="contact.html">联系我们</a></li>
+				<li><a href="/main/contactUs">联系我们</a></li>
 			</ul>
 		</div>
 		<!--banner-->
 		<div id="owl" class="owl-carousel">
-			<a class="item"><img src="static/images/banner/banner1.jpg" alt=""></a>
-			<a class="item"><img src="static/images/banner/banner3.jpg" alt=""></a>
-			<a class="item"><img src="static/images/banner/banner2.jpg" alt=""></a>
+			<a class="item"><img th:src="@{/images/banner/banner1.jpg}" alt=""></a>
+			<a class="item"><img th:src="@{/images/banner/banner3.jpg}" alt=""></a>
+			<a class="item"><img th:src="@{/images/banner/banner2.jpg}" alt=""></a>
 		</div>
 		
 		<div class="pg clearfix">
@@ -110,10 +110,10 @@
 				</div>
 			</div>
 		</div>
-		
-		
-		<script src="static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="static/js/owl.carousel.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="static/js/main.js" type="text/javascript" charset="utf-8"></script>
+
+
+		<script th:src="@{/js/jquery.min.js}" type="text/javascript" charset="utf-8"></script>
+		<script th:src="@{/js/owl.carousel.min.js}" type="text/javascript" charset="utf-8"></script>
+		<script th:src="@{/js/main.js}" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

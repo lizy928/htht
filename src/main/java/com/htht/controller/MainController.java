@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.jws.WebParam;
+
 /**
  * @author 李正元
  * @create 2018-08-11 23:39
@@ -29,11 +31,28 @@ public class MainController {
         return "index";
     }
 
-    @RequestMapping("/test2")
-    public String index(){
+    @RequestMapping("/allNews")
+    public Object listNews(Model model){
+        model.addAttribute("newsList",newsService.getAll());
         return "news";
     }
 
+    @RequestMapping("/allProduct")
+    public Object listProducts(Model model){
+        model.addAttribute("productList",productService.getAll());
+        return "products";
+    }
 
+    @RequestMapping("/aboutUs")
+    public Object about(Model model){
+        model.addAttribute("",0);
+        return "about";
+    }
+
+    @RequestMapping("/contactUs")
+    public Object contact(Model model){
+        model.addAttribute("",0);
+        return "contact";
+    }
 
 }
