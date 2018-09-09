@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * Created By Lizhengyuan on 18-8-29
  */
@@ -29,9 +31,14 @@ public class ProductController extends BaseController{
     }
 
     @RequestMapping("addProduct")
-    public Object addNews(Product product){
-        productService.addProduct(product);
-        return buildSuccJson();
+    public Object addNews(Product product, HttpServletResponse response){
+        response.setHeader("X-Frame-Options", "SAMEORIGIN");// 解决IFrame拒绝的问题
+        try {
+            productService.addProduct(product);
+            return buildSuccJson();
+        }catch (Exception e){
+            return buildErrJson("操作异常");
+        }
     }
 
     @RequestMapping("deleteProductById")

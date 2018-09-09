@@ -20,6 +20,7 @@
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-thymeleaf:1.4.0.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-web:1.5.8.RELEASE" />
           <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.2" />
+          <element id="library" level="project" name="Gradle: commons-lang:commons-lang:2.6" />
           <element id="library" level="project" name="Gradle: com.alibaba:druid:1.1.5" />
           <element id="library" level="project" name="Gradle: mysql:mysql-connector-java:8.0.11" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-security:1.5.8.RELEASE" />
@@ -51,6 +52,13 @@
           <element id="library" level="project" name="Gradle: org.thymeleaf:thymeleaf-spring4:2.1.5.RELEASE" />
           <element id="library" level="project" name="Gradle: nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:1.4.0" />
           <element id="library" level="project" name="Gradle: xerces:xercesImpl:2.11.0" />
+          <element id="library" level="project" name="Gradle: com.jayway.jsonpath:json-path:2.2.0" />
+          <element id="library" level="project" name="Gradle: junit:junit:4.12" />
+          <element id="library" level="project" name="Gradle: org.assertj:assertj-core:2.6.0" />
+          <element id="library" level="project" name="Gradle: org.mockito:mockito-core:1.10.19" />
+          <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-library:1.3" />
+          <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Gradle: org.skyscreamer:jsonassert:1.4.0" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-test:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-jdbc:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-tx:4.3.12.RELEASE" />
@@ -58,43 +66,37 @@
           <element id="library" level="project" name="Gradle: org.springframework:spring-expression:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.3.12.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.5.8.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.17" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:8.5.23" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:8.5.23" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-el:8.5.23" />
+          <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.1.0.Final" />
           <element id="library" level="project" name="Gradle: org.jboss.logging:jboss-logging:3.3.1.Final" />
+          <element id="library" level="project" name="Gradle: com.fasterxml:classmate:1.3.4" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.8.0" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.8.10" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat:tomcat-jdbc:8.5.23" />
           <element id="library" level="project" name="Gradle: org.thymeleaf:thymeleaf:2.1.5.RELEASE" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.1.11" />
           <element id="library" level="project" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.25" />
+          <element id="library" level="project" name="Gradle: org.slf4j:jul-to-slf4j:1.7.25" />
           <element id="library" level="project" name="Gradle: org.slf4j:log4j-over-slf4j:1.7.25" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
           <element id="library" level="project" name="Gradle: org.codehaus.groovy:groovy:2.4.12" />
           <element id="library" level="project" name="Gradle: xml-apis:xml-apis:1.4.01" />
+          <element id="library" level="project" name="Gradle: net.minidev:json-smart:2.2.1" />
+          <element id="library" level="project" name="Gradle: org.objenesis:objenesis:2.1" />
+          <element id="library" level="project" name="Gradle: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat:tomcat-annotations-api:8.5.23" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat:tomcat-juli:8.5.23" />
           <element id="library" level="project" name="Gradle: ognl:ognl:3.0.8" />
           <element id="library" level="project" name="Gradle: org.javassist:javassist:3.21.0-GA" />
           <element id="library" level="project" name="Gradle: org.unbescape:unbescape:1.1.0.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/jayway/jsonpath/json-path/2.2.0/json-path-2.2.0.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/assertj/assertj-core/2.6.0/assertj-core-2.6.0.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/skyscreamer/jsonassert/1.4.0/jsonassert-1.4.0.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.17/snakeyaml-1.17.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/net/minidev/json-smart/2.2.1/json-smart-2.2.1.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.1/objenesis-2.1.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/net/minidev/accessors-smart/1.1/accessors-smart-1.1.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar" />
+          <element id="library" level="project" name="Gradle: net.minidev:accessors-smart:1.1" />
+          <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.1.11" />
+          <element id="library" level="project" name="Gradle: org.ow2.asm:asm:5.0.3" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/1.5.8.RELEASE/9bc9a40e0718726ed48f6becc509b2d186f1ebcc/spring-boot-starter-aop-1.5.8.RELEASE.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.8.11/aspectjweaver-1.8.11.jar" />
         </element>
       </element>
     </root>

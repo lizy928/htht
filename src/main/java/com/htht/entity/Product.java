@@ -19,10 +19,10 @@ public class Product {
       `image` varchar(255) CHARACTER SET utf8 DEFAULT ''
       ) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;*/
 
-      private Integer Id;
-      private Integer type;
-      private String name;
-      private String desc;
-      private String image;
+      private Integer pid;
+      private String pname;
+      private String pdesc;
+      private String pimage;
+      private Integer porder;
 
 }

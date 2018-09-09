@@ -31,6 +31,11 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/headCommon")
+    public Object headCommon(){
+        return "head-common";
+    }
+
     @RequestMapping("/allNews")
     public Object listNews(Model model){
         model.addAttribute("newsList",newsService.getAll());

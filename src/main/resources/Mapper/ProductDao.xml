@@ -4,8 +4,8 @@
 
     <insert id="add" parameterType="com.htht.entity.Product">
         INSERT INTO
-        product(id, type, name, desc, image)
-        VALUES (#{product.Id}, #{product.type}, #{product.name},#{product.desc}, #{product.image})
+        product(pname, pdesc, pimage, porder)
+        VALUES (#{product.pname},#{product.pdesc}, #{product.pimage}, #{product.porder});
     </insert>
 
     <update id="updateProduct" parameterType="com.htht.entity.Product">
