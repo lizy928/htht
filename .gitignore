@@ -1,0 +1,15 @@
+*classes
+target/
+/build
+.gradle/
+.idea
+.svn
+.classpath
+/.metadata
+/.recommenders
+*~
+*#
+rat.out
+*.iml
+.project
+.settings
