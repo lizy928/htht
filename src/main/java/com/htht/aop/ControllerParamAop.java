@@ -1,17 +1,13 @@
 package com.htht.aop;
 
+import com.htht.util.RequestHolder;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletResponse;
-import java.lang.reflect.Method;
 
 /**
  * @author 李正元
@@ -45,4 +41,15 @@ public class ControllerParamAop {
         response.setHeader("X-Frame-Options", "SAMEORIGIN");// 解决IFrame拒绝的问题
         return pjp.proceed();
     }*/
+
+    @Pointcut("execution(public * com.htht.controller..*.*(..))")
+    public void addParam() {
+
+    }
+
+    @After("addParam()")
+    public void afterController(JoinPoint joinPoint) {
+        HttpServletResponse response = RequestHolder.getResponse();
+        response.setHeader("X-Frame-Options", "SAMEORIGIN");// 解决IFrame拒绝的问题
+    }
 }

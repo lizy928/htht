@@ -10,8 +10,12 @@
 
     <update id="updateProduct" parameterType="com.htht.entity.Product">
         update
-        product set
-        id = #{Id}, type = #{type}, name = #{name}, desc = #{desc}, image = #{image}
+          product
+        set
+            porder = #{product.porder},
+            pname = #{product.pname},
+            pdesc = #{product.pdesc},
+            pimage = #{product.pimage}
     </update>
 
     <delete id="deleteProductById">
@@ -19,11 +23,11 @@
     </delete>
 
     <select id="getAll" resultType="com.htht.entity.Product">
-        select * from product;
+        select * from product by porder;
     </select>
 
     <select id="getProductById" resultType="com.htht.entity.Product">
-        select * from product where id = #{Id}
+        select * from product where pid = #{Id}
     </select>
 
 </mapper>

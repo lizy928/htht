@@ -21,6 +21,7 @@ public class Product {
 
       private Integer pid;
       private String pname;
+      private String file;
       private String pdesc;
       private String pimage;
       private Integer porder;

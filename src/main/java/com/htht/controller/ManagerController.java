@@ -30,14 +30,12 @@ public class ManagerController extends BaseController{
     }
 
     @RequestMapping("productManager")
-    public String productManager(HttpServletResponse response){
-        response.setHeader("X-Frame-Options", "SAMEORIGIN");// 解决IFrame拒绝的问题
+    public String productManager(){
         return "manager/product_mana";
     }
 
     @RequestMapping("productEdit")
-    public Object productEdit(HttpServletResponse response){
-        response.setHeader("X-Frame-Options", "SAMEORIGIN");// 解决IFrame拒绝的问题
+    public Object productEdit(){
         return "manager/product_edit";
     }
 

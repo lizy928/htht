@@ -31,8 +31,7 @@ public class ProductController extends BaseController{
     }
 
     @RequestMapping("addProduct")
-    public Object addNews(Product product, HttpServletResponse response){
-        response.setHeader("X-Frame-Options", "SAMEORIGIN");// 解决IFrame拒绝的问题
+    public Object addNews(Product product){
         try {
             productService.addProduct(product);
             return buildSuccJson();
