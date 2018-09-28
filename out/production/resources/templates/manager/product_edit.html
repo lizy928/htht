@@ -103,23 +103,6 @@
               form.on('submit(add)', function(data){
                   //form.submit("");
                   //发异步，把数据提交给php
-                  $.ajax({
-                      url: "/product/addProduct",
-                      type: "post",
-                      data: data,
-                      dataType: "json",
-                      success: function(msg) {
-                          alert(msg);
-                      },
-                      error: function(XMLHttpRequest, textStatus, errorThrown) {
-                          alert(XMLHttpRequest.status);
-                          alert(XMLHttpRequest.readyState);
-                          alert(textStatus);
-                      },
-                      complete: function(XMLHttpRequest, textStatus) {
-                          this; // 调用本次AJAX请求时传递的options参数
-                      }
-                  });
                   //发异步，把数据提交给php
                   layer.alert("增加成功", {icon: 6},function () {
                       // 获得frame索引

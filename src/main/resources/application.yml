@@ -76,7 +76,8 @@ mybatis:
   mapper-locations: classpath:Mapper/*.xml
 
 #ip查询地址
-ip_url: "http://ip.taobao.com/service/getIpInfo.php?ip=";
+
+#ip_url: "http://ip.taobao.com/service/getIpInfo.php?ip=";
 
 #图片地址
 image:
