@@ -33,7 +33,7 @@ public class DruidStatConfig {
     public ServletRegistrationBean dataSourceStat(){
         ServletRegistrationBean registrationBean = new ServletRegistrationBean(new StatViewServlet(),"/druid/*");
         registrationBean.setName("DruidStatView");
-        Map<String,String> initParam = new HashMap<String, String>();
+        Map<String,String> initParam = new HashMap<>();
         initParam.put("resetEnable","true");
         initParam.put("loginUsername",username);
         initParam.put("loginPassword",password);

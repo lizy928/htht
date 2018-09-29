@@ -23,7 +23,7 @@
     </delete>
 
     <select id="getAll" resultType="com.htht.entity.Product">
-        select * from product by porder;
+        select * from product order by porder;
     </select>
 
     <select id="getProductById" resultType="com.htht.entity.Product">

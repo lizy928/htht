@@ -118,12 +118,14 @@
                   $('#LAY_demo_upload').attr('src',res.url);
                 }
               });
-            
+
 
               //监听提交
               form.on('submit(add)', function(data){
+
                 console.log(data);
                 //发异步，把数据提交给php
+                  $.ajax($,data);
                 layer.alert("增加成功", {icon: 6},function () {
                     // 获得frame索引
                     var index = parent.layer.getFrameIndex(window.name);
@@ -132,8 +134,6 @@
                 });
                 return false;
               });
-              
-              
             });
         </script>
         <script>

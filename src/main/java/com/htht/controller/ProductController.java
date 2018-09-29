@@ -5,8 +5,7 @@ import com.htht.entity.Product;
 import com.htht.service.NewsService;
 import com.htht.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -30,8 +29,8 @@ public class ProductController extends BaseController{
         return buildSuccJson(productService.getProductById(Id));
     }
 
-    @RequestMapping("addProduct")
-    public Object addNews(Product product){
+    @RequestMapping(value = "addProduct", method = RequestMethod.POST)
+    public Object addNews(@RequestBody Product product){
         try {
             productService.addProduct(product);
             return buildSuccJson();

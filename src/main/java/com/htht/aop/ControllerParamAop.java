@@ -62,7 +62,7 @@ public class ControllerParamAop {
 
     }
 
-    @Before("getIp()")
+   /* @Before("getIp()")
     public void saveIp(){
         HttpServletRequest request = RequestHolder.getRequest();
         String ip = IpUtil.getIpAddr(request);
@@ -88,7 +88,7 @@ public class ControllerParamAop {
                 ipAddress = "未知";
             }
         }
-    }
+    }*/
 
     @After("addParam()")
     public void afterController(JoinPoint joinPoint) {
