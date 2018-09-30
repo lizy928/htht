@@ -74,6 +74,8 @@ logging:
 mybatis:
   type-aliases-package: com.htht.entity
   mapper-locations: classpath:Mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
 
 #ip查询地址
 

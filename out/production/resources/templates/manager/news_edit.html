@@ -20,51 +20,25 @@
             <form class="layui-form">
                 <div class="layui-form-item">
                     <label for="link" class="layui-form-label">
-                        <span class="x-red">*</span>产品名称
+                        <span class="x-red">*</span>标题
                     </label>
                     <div class="layui-input-inline">
-                        <input type="text" id="link" name="pname" id="pname" required lay-verify="required"
+                        <input type="text" id="link" name="title" id="title" required lay-verify="required"
                         autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label for="link" class="layui-form-label">
-                        <span class="x-red">*</span>排序
-                    </label>
-                    <div class="layui-input-inline">
-                        <input type="text" id="link" name="porder" th:id="porder" required lay-verify="required"
-                               autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="link" class="layui-form-label">
-                    <span class="x-red">*</span>图片</label>
-                    <div class="layui-input-inline">
-                      <div class="site-demo-upbar">
-                            <input type="file" name="file" class="layui-upload-file">
-                      </div>
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label  class="layui-form-label">图片
-                    </label>
-                    <img id="imgId" width="400" th:src="@{/images_mgt/img1.jpg}">
-                </div>
-                <div class="layui-form-item">
                     <label for="desc" class="layui-form-label">
-                        <span class="x-red">*</span>产品简介
+                        <span class="x-red">*</span>内容
                     </label>
                     <div class="layui-input-inline">
-                        <textarea id="L_content" name="pdesc" th:id="pdesc"
+                        <textarea id="L_content" name="content" th:id="content"
                         placeholder="简介" class="layui-textarea fly-editor" style="height: 260px;">简介</textarea>
                     </div>
                     <div class="layui-form-mid layui-word-aux">
                         <span class="x-red">*</span>
                     </div>
                 </div>
-                    <div class="layui-input-inline" hidden="hidden">
-                        <input name="pimage" id="image" hidden="hidden">
-                    </div>
                 <div class="layui-form-item">
                     <label for="L_repass" class="layui-form-label">
                     </label>
@@ -83,37 +57,18 @@
               var form = layui.form()
               ,layer = layui.layer;
 
-
-              //图片上传接口
-              layui.upload({
-                url: '/file/productFileUpload', //上传接口,
-                    success: function(res){ //上传成功后的回调
-                    console.log(res);
-                    if(res.code == -1){
-                        alert("上传失败");
-                    }else {
-                        $("#image").attr("value",res.resp);
-                        $("#imgId").attr("src",res.resp);
-                        alert("上传成功");
-                    }
-                }
-              });
-
                 //监听提交
                 form.on('submit(add)', function (data) {
                     var loading = layer.load(1);
-                    var pname = $("#pname").val();
-                    var porder = $("#porder").val();
-                    var pdesc = $("#pdesc").val();
-                    var image = $("#image").val();
+                    var title = $("#title").val();
+                    var content = $("#content").val();
                     var params = {}
-                    params.pname = pname
-                    params.porder = porder
-                    params.pdesc = pdesc
-                    params.pimage = image
+                    params.title = title
+                    params.content = content
+                    params.type = 1
                     alert(JSON.stringify(params));
                     $.ajax({
-                        url: "/product/addProduct",
+                        url: "/news/addNews",
                         contentType: "application/json",
                         dataType: "json",
                         data: JSON.stringify(params), //请求的附加参数，用json对象

@@ -37,7 +37,7 @@
             </form>
             <xblock>
                 <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button>
-                <button class="layui-btn" onclick="about_us_add('添加用户','productEdit','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:25px">共有数据：88 条</span></xblock>
+                <button class="layui-btn" onclick="about_us_add('添加用户','newsEdit','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:25px">共有数据：88 条</span></xblock>
             <table class="layui-table">
                 <thead>
                     <tr>
@@ -45,16 +45,13 @@
                             <input type="checkbox" name="" value="">
                         </th>
                         <th width="15%">
-                            产品名称
-                        </th>
-                        <th width="15%">
-                            图片
+                            标题
                         </th>
                         <th width="50%">
-                            产品简介
+                            内容
                         </th>
-                        <th width="5%">
-                            显示顺序
+                        <th width="25%">
+                            创建时间
                         </th>
                         <th width="10%">
                             操作
@@ -66,17 +63,11 @@
                         <td>
                             <input type="checkbox" value="1" name="">
                         </td>
-                        <td th:text="${info.pname}"></td>
-                        <td align="center">
-                            <img th:src="${info.pimage}" width="100" alt="">
-                        </td>
-                        <td th:text="${info.pdesc}"></td>
-                        <td class="td-status">
-                            <span class="layui-btn layui-btn-normal layui-btn-mini" th:text="${info.porder}">
-                            </span>
-                        </td>
+                        <td th:text="${info.title}"></td>
+                        <td th:text="${info.content}"></td>
+                        <td th:text="${info.createTime}"></td>
                         <td class="td-manage">
-                            <a title="修改" href="javascript:;" onclick="about_us_edit('修改','productEdit',4,'','510')"
+                            <a title="修改" href="javascript:;" onclick="about_us_edit('修改','newsEdit',4,'','510')"
                             class="ml-5" style="text-decoration:none">
                                 <i class="layui-icon">&#xe642;</i>
                             </a>

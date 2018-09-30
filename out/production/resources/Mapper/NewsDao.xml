@@ -4,8 +4,8 @@
 
     <insert id="add" parameterType="com.htht.entity.News">
         INSERT INTO
-        news (id, type, title, content, create_time)
-        VALUES (#{news.Id}, #{news.type}, #{news.title}, #{news.content}, #{news.createTime})
+        news (type, title, content)
+        VALUES (#{news.type}, #{news.title}, #{news.content})
     </insert>
 
     <update id="updateNews" parameterType="com.htht.entity.News">

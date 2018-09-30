@@ -3,6 +3,7 @@ package com.htht.controller;
 import com.htht.entity.News;
 import com.htht.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,26 +23,39 @@ public class NewsController extends BaseController{
     }
 
     @RequestMapping("getNewsById")
-    public Object getNewsById(int Id){
-        return buildSuccJson(newsService.getNewsById(Id));
+    public Object getNewsById(int id){
+        return buildSuccJson(newsService.getNewsById(id));
     }
 
     @RequestMapping("addNews")
-    public Object addNews(News news){
-        newsService.addNews(news);
-        return buildSuccJson();
+    public Object addNews(@RequestBody News news){
+        try{
+            newsService.addNews(news);
+            return buildSuccJson();
+        }catch (Exception e){
+            return buildErrJson("操作失败!");
+        }
     }
 
     @RequestMapping("deleteNewsById")
     public Object deleteNewsById(int Id){
-        newsService.deleteNews(Id);
-        return buildSuccJson();
+        try {
+            newsService.deleteNews(Id);
+            return buildSuccJson();
+        }catch (Exception e){
+            return buildErrJson("操作失败!");
+        }
+
     }
 
     @RequestMapping("updateNews")
-    public Object updateNews(News news){
-        newsService.updateNews(news);
-        return buildSuccJson();
+    public Object updateNews(@RequestBody News news){
+        try {
+            newsService.updateNews(news);
+            return buildSuccJson();
+        }catch (Exception e){
+            return buildErrJson("操作失败!");
+        }
     }
 
 }

@@ -25,13 +25,15 @@
 				<div class="bread">
 					<p>
 						当前位置：
-						<a href="index.html">首页</a>/
+						<a href="main/homePage">首页</a>/
 						<a>联系我们</a>
 					</p>
 				</div>
 				<div class="pg-content">
 					<div class="map">
-						<iframe src="static/map/map.html"></iframe>
+						<!--<iframe th:src="@{map/map}"></iframe>-->
+						<!--<iframe th:replace="map :: common"></iframe>-->
+						<iframe th:replace="map::html"></iframe>
 					</div>
 					<p>联系人：尤勤峰</p>
 					<p>联系电话：67572586</p>

@@ -62,27 +62,21 @@
                     </tr>
                 </thead>
                 <tbody id="x-img">
-                    <tr>
+                    <tr th:each="info,infoStat : ${list}">
                         <td>
                             <input type="checkbox" value="1" name="">
                         </td>
-                        <td>
-                            公司简介
-                        </td>
+                        <td th:text="${info.pname}"></td>
                         <td align="center">
-                            <img th:src="@{/images_mgt/img1.jpg}" width="100" alt="">
+                            <img th:src="${info.pimage}" width="100" alt="">
                         </td>
-                        <td >公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介</td>
+                        <td th:text="${info.pdesc}"></td>
                         <td class="td-status">
-                            <span class="layui-btn layui-btn-normal layui-btn-mini">
-                                已显示
+                            <span class="layui-btn layui-btn-normal layui-btn-mini" th:text="${info.porder}">
                             </span>
                         </td>
                         <td class="td-manage">
-                            <a style="text-decoration:none" onclick="banner_stop(this,'10001')" href="javascript:;" title="不显示">
-                                <i class="layui-icon">&#xe601;</i>
-                            </a>
-                            <a title="修改" href="javascript:;" onclick="about_us_edit('修改','productEdit','4','','510')"
+                            <a title="修改" href="javascript:;" onclick="about_us_edit('修改','productEdit',4,'','510')"
                             class="ml-5" style="text-decoration:none">
                                 <i class="layui-icon">&#xe642;</i>
                             </a>
@@ -139,6 +133,10 @@
              /*添加*/
             function about_us_add(title,url,w,h){
                 x_admin_show(title,url,w,h);
+                //查询产品信息
+
+
+
             }
              /*停用*/
             function banner_stop(obj,id){
@@ -163,12 +161,55 @@
             }
             // 编辑
             function about_us_edit (title,url,id,w,h) {
-                x_admin_show(title,url,w,h); 
+                $.ajax({
+                    url: "/product/getProductById",
+                    contentType: "application/json",
+                    dataType: "json",
+                    data: id,
+                    method: 'get',
+                    success: function (res) {
+                        if (res.code === 0) {
+                            //查询成功
+
+                        }
+                        else {
+                            layer.close(loading);
+                            layer.msg("查询失败", { icon: 5 });
+                        }
+                    },
+                    error: function () {
+                        layer.close(loading);
+                        layer.msg("操作失败", { icon: 5 });
+                    }
+                });
+                x_admin_show(title,url,w,h);
             }
             /*删除*/
             function banner_del(obj,id){
                 layer.confirm('确认要删除吗？',function(index){
                     //发异步删除数据
+                    $.ajax({
+                        url: "/product/deleteProductById",
+                        contentType: "application/json",
+                        dataType: "json",
+                        data: id,
+                        method: 'get',
+                        success: function (res) {
+                            if (res.code === 0) {
+                                //查询成功
+
+                            }
+                            else {
+                                layer.close(loading);
+                                layer.msg("删除失败", { icon: 5 });
+                            }
+                        },
+                        error: function () {
+                            layer.close(loading);
+                            layer.msg("操作失败", { icon: 5 });
+                        }
+                    });
+
                     $(obj).parents("tr").remove();
                     layer.msg('已删除!',{icon:1,time:1000});
                 });

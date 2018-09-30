@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 
 import javax.jws.WebParam;
 
@@ -55,8 +56,9 @@ public class MainController {
     }
 
     @RequestMapping("/contactUs")
-    public Object contact(Model model){
+    public Object contact(ViewControllerRegistry registry, Model model){
         model.addAttribute("",0);
+        registry.addViewController("/map").setViewName("map");
         return "contact";
     }
 

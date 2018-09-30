@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>
-            关于我们
+            留言管理
         </title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,7 +18,7 @@
             <span class="layui-breadcrumb">
               <a><cite>首页</cite></a>
               <a><cite>网站信息管理</cite></a>
-              <a><cite>关于我们</cite></a>
+              <a><cite>留言管理</cite></a>
             </span>
             <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
         </div>
@@ -37,24 +37,21 @@
             </form>
             <xblock>
                 <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button>
-                <button class="layui-btn" onclick="about_us_add('添加用户','productEdit','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:25px">共有数据：88 条</span></xblock>
+                <button class="layui-btn" onclick="about_us_add('添加用户','messageEdit','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:25px">共有数据：88 条</span></xblock>
             <table class="layui-table">
                 <thead>
                     <tr>
                         <th width="5%">
                             <input type="checkbox" name="" value="">
                         </th>
-                        <th width="15%">
-                            产品名称
+                        <th width="20%">
+                            姓名
                         </th>
-                        <th width="15%">
-                            图片
+                        <th width="20%">
+                            联系方式
                         </th>
                         <th width="50%">
-                            产品简介
-                        </th>
-                        <th width="5%">
-                            显示顺序
+                            创建时间
                         </th>
                         <th width="10%">
                             操作
@@ -66,20 +63,10 @@
                         <td>
                             <input type="checkbox" value="1" name="">
                         </td>
-                        <td th:text="${info.pname}"></td>
-                        <td align="center">
-                            <img th:src="${info.pimage}" width="100" alt="">
-                        </td>
-                        <td th:text="${info.pdesc}"></td>
-                        <td class="td-status">
-                            <span class="layui-btn layui-btn-normal layui-btn-mini" th:text="${info.porder}">
-                            </span>
-                        </td>
+                        <td th:text="${info.name}"></td>
+                        <td th:text="${info.mobile}"></td>
+                        <td th:text="${info.createTime}"></td>
                         <td class="td-manage">
-                            <a title="修改" href="javascript:;" onclick="about_us_edit('修改','productEdit',4,'','510')"
-                            class="ml-5" style="text-decoration:none">
-                                <i class="layui-icon">&#xe642;</i>
-                            </a>
                             <a title="删除" href="javascript:;" onclick="banner_del(this,'1')" 
                             style="text-decoration:none">
                                 <i class="layui-icon">&#xe640;</i>
@@ -88,9 +75,7 @@
                     </tr>
                 </tbody>
             </table>
-
             <div id="page"></div>
-            
         </div>
         <br /><br /><br />
         <script th:src="@{/lib/layui/layui.js}" charset="utf-8"></script>
@@ -133,10 +118,7 @@
              /*添加*/
             function about_us_add(title,url,w,h){
                 x_admin_show(title,url,w,h);
-                //查询产品信息
-
-
-
+                //查询产品信
             }
              /*停用*/
             function banner_stop(obj,id){

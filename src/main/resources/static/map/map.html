@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -23,9 +22,9 @@
 	
 	<title>地图</title>
 </head>
-<body>
+<map th:fragment="common">
 	<div id="allmap"></div>
-</body>
+</map>
 </html>
 <script type="text/javascript">
 	// 百度地图API功能
