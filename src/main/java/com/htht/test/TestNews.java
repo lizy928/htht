@@ -5,10 +5,15 @@ import com.htht.entity.News;
 import com.htht.service.NewsService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.omg.CORBA.Environment;
+import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.ResourceUtils;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
 
 /**
@@ -30,5 +35,18 @@ public class TestNews {
     public void testNews(){
         List<News> newsList = newsService.getAll();
         System.out.println(newsList);
+    }
+
+    @Test
+    public void test(){
+        try {
+            File file = ResourceUtils.getFile("classpath:homepagetext.txt");
+
+
+            System.out.println(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 }

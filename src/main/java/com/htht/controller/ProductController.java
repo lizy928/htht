@@ -14,39 +14,40 @@ import javax.servlet.http.HttpServletResponse;
  */
 @RequestMapping("product")
 @RestController
-public class ProductController extends BaseController{
+public class ProductController extends BaseController {
 
     @Autowired
     private ProductService productService;
 
+    @RequestMapping("getHeadProductList")
+    public Object getHeadProductList() {
+        return buildSuccJson(productService.getHeadProductList());
+    }
+
     @RequestMapping("getAll")
-    public Object getAll(){
-       return buildSuccJson(productService.getAll());
+    public Object getAll() {
+        return buildSuccJson(productService.getAll());
     }
 
     @RequestMapping("getProductById")
-    public Object getNewsById(int Id){
+    public Object getNewsById(int Id) {
         return buildSuccJson(productService.getProductById(Id));
     }
 
     @RequestMapping(value = "addProduct", method = RequestMethod.POST)
-    public Object addNews(@RequestBody Product product){
-        try {
-            productService.addProduct(product);
-            return buildSuccJson();
-        }catch (Exception e){
-            return buildErrJson("操作异常");
-        }
+    public Object addNews(@RequestBody Product product) {
+        productService.addProduct(product);
+        return buildSuccJson();
     }
 
     @RequestMapping("deleteProductById")
-    public Object deleteNewsById(int Id){
+    public Object deleteNewsById(int Id) {
         productService.deleteProduct(Id);
         return buildSuccJson();
     }
 
     @RequestMapping("updateProduct")
-    public Object updateNews(Product product){
+    public Object updateNews(Product product) {
         productService.updateProduct(product);
         return buildSuccJson();
     }

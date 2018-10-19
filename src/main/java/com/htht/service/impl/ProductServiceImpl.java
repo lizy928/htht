@@ -4,6 +4,7 @@ import com.htht.dao.ProductDao;
 import com.htht.entity.Product;
 import com.htht.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,9 @@ import java.util.List;
  */
 @Service
 public class ProductServiceImpl implements ProductService {
+
+    @Value("${home-page.product-num}")
+    private String homePageProductNumStr;
 
     @Autowired
     private ProductDao productDao;
@@ -40,5 +44,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void addProduct(Product product) {
         productDao.add(product);
+    }
+
+    @Override
+    public Object getHeadProductList() {
+        int homePageProductNum = Integer.parseInt(homePageProductNumStr);
+        return productDao.getProductList(homePageProductNum);
     }
 }

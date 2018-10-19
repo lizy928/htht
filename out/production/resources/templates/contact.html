@@ -33,27 +33,27 @@
 					<div class="map">
 						<!--<iframe th:src="@{map/map}"></iframe>-->
 						<!--<iframe th:replace="map :: common"></iframe>-->
-						<iframe th:replace="map::html"></iframe>
+						<div th:replace="map::map"></div>
 					</div>
 					<p>联系人：尤勤峰</p>
 					<p>联系电话：67572586</p>
 					<p>公司邮编：215000</p>
 				</div>
-				<form>
+				<form action="/message/addMessage" type="post">
 					<h3>在线留言</h3>
 					<ul class="clearfix">
 						<li>
 							<p>姓名：</p>
-							<input placeholder="请输入你的姓名" />
+							<input name="name" placeholder="请输入你的姓名" />
 						</li>
 						<li>
 							<p>联系方式：</p>
-							<input placeholder="请输入你的联系方式" />
+							<input name="mobile" placeholder="请输入你的联系方式" />
 						</li>
 					</ul>
 					<p>留言</p>
-					<textarea placeholder="请输入留言信息"></textarea>
-					<input type="button" value="发送" />
+					<textarea name="content" placeholder="请输入留言信息"></textarea>
+					<input type="submit" value="发送" />
 				</form>
 			</div>
 		</div>

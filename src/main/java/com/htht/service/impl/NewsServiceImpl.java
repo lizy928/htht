@@ -4,6 +4,7 @@ import com.htht.dao.NewsDao;
 import com.htht.entity.News;
 import com.htht.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,9 @@ import java.util.List;
  */
 @Service
 public class NewsServiceImpl implements NewsService {
+
+    @Value("${home-page.news-num}")
+    private String homePageNewsNumStr;
 
     @Autowired
     private NewsDao newsDao;
@@ -40,5 +44,11 @@ public class NewsServiceImpl implements NewsService {
     @Override
     public void addNews(News news) {
         newsDao.add(news);
+    }
+
+    @Override
+    public Object getHeadNewsList() {
+        int homePageNewsNum = Integer.parseInt(homePageNewsNumStr);
+        return newsDao.getHeadNewsList(homePageNewsNum);
     }
 }

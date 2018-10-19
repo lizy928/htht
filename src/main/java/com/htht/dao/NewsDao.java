@@ -22,4 +22,6 @@ public interface NewsDao {
     void deleteNewsById(@Param("Id") int Id);
 
     void add(@Param("news") News news);
+
+    List<News> getHeadNewsList(@Param("homePageNewsNum") int homePageNewsNum);
 }

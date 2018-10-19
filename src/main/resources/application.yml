@@ -86,3 +86,8 @@ image:
   path: /data/images_htht/
   #path: E:/data/images_htht/
 
+#首页配置
+home-page:
+  product-num: 8
+  news-num: 6
+

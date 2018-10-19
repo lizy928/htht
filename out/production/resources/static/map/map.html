@@ -1,5 +1,5 @@
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:fragment="map">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<style type="text/css">
@@ -18,7 +18,7 @@
 	.clearFloat{display: block; content: "" ; clear: both;}
 	.comp p{float:left; font-size: 14px; color: #888; line-height: 40px;}
 	</style>
-	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=F8GGZGTAevRPL7BwLtTjQvEzdAlpzqTt"></script>
+	<script type="text/javascript" th:src="@{http://api.map.baidu.com/api?v=2.0&ak=F8GGZGTAevRPL7BwLtTjQvEzdAlpzqTt}"></script>
 	
 	<title>地图</title>
 </head>

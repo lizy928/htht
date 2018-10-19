@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 public class ViewConfig{
 
-    public static final String DEFAULT_ERROR_VIEW = "404";
+    public static final String DEFAULT_ERROR_VIEW = "forward:main/netFound";
 
     @ExceptionHandler(value = NoHandlerFoundException.class)
     public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {

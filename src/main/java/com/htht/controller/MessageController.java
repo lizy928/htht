@@ -28,7 +28,7 @@ public class MessageController extends BaseController{
         return buildSuccJson(messageService.getMessageById(Id));
     }
 
-    @RequestMapping("addProduct")
+    @RequestMapping("addMessage")
     public Object addNews(Message message){
         messageService.addMessage(message);
         return buildSuccJson();
@@ -43,7 +43,7 @@ public class MessageController extends BaseController{
     @RequestMapping("updateProduct")
     public Object updateNews(Message message){
         messageService.updateMessage(message);
-        return buildSuccJson();
+        return "";
     }
 
 }

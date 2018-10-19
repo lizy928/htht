@@ -19,4 +19,6 @@ public interface ProductService {
     void deleteProduct(int Id);
 
     void addProduct(Product product);
+
+    Object getHeadProductList();
 }

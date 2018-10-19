@@ -2,6 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.htht.dao.ProductDao">
 
+    <sql id="Base_Sql">
+        pname, pdesc, pimage, porder
+    </sql>
+
     <insert id="add" parameterType="com.htht.entity.Product">
         INSERT INTO
         product(pname, pdesc, pimage, porder)
@@ -23,11 +27,21 @@
     </delete>
 
     <select id="getAll" resultType="com.htht.entity.Product">
-        select * from product order by porder;
+        select
+        <include refid="Base_Sql"/>
+        from product
+        order by porder;
     </select>
 
     <select id="getProductById" resultType="com.htht.entity.Product">
         select * from product where pid = #{Id}
+    </select>
+    <select id="getProductList" resultType="com.htht.entity.Product">
+        select
+        <include refid="Base_Sql"/>
+        from product
+        order by porder
+        limit #{homePageProductNum}
     </select>
 
 </mapper>

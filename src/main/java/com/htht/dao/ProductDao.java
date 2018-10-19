@@ -21,4 +21,6 @@ public interface ProductDao {
     void deleteProductById(@Param("Id") int Id);
 
     void add(@Param("product") Product product);
+
+    List<Product> getProductList(@Param("homePageProductNum") int homePageProductNum);
 }

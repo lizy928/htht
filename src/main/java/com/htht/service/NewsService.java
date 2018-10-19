@@ -18,4 +18,6 @@ public interface NewsService {
     void deleteNews(int Id);
 
     void addNews(News news);
+
+    Object getHeadNewsList();
 }
