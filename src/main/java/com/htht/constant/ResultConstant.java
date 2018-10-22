@@ -1,7 +1,7 @@
 package com.htht.constant;
 
 /**
- * Created by Singal
+ * Created by lizy
  */
 public class ResultConstant {
     public static final int SUCCESS = 0;

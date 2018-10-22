@@ -90,4 +90,8 @@ image:
 home-page:
   product-num: 8
   news-num: 6
+  banner-iamge:
+    b-1: "/images/banner/banner1.jpg"
+    b-2: "/images/banner/banner2.jpg"
+    b-3: "/images/banner/banner3.jpg"
 

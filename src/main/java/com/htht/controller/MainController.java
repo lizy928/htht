@@ -1,23 +1,12 @@
 package com.htht.controller;
 
-import com.alibaba.fastjson.JSONObject;
-import com.htht.Cache.TextCache;
+import com.htht.cache.TextCache;
 import com.htht.service.NewsService;
 import com.htht.service.ProductService;
-import com.sun.deploy.net.HttpUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import sun.net.www.http.HttpClient;
-
-import javax.jws.WebParam;
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.util.Arrays;
 
 /**
  * @author 李正元
@@ -33,15 +22,15 @@ public class MainController extends BaseController{
 
     @Autowired
     private NewsService newsService;
-/*
+
     @Autowired
-    private TextCache textCache;*/
+    private TextCache textCache;
 
     @RequestMapping(value = "homePage")
     public Object homePage(Model model){
         model.addAttribute("productList",productService.getHeadProductList());
         model.addAttribute("newsList",newsService.getHeadNewsList());
-       // model.addAttribute("homePageTextMap",textCache.getHomePageTextMap());
+        model.addAttribute("homePageTextMap",textCache.getHomePageTextMap());
         return "index";
     }
 

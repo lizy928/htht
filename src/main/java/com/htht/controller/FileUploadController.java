@@ -1,6 +1,5 @@
 package com.htht.controller;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
 import com.htht.util.FileUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -10,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
@@ -35,7 +32,7 @@ public class FileUploadController extends BaseController{
 
     @RequestMapping(value = "productFileUpload", method = RequestMethod.POST)
     public @ResponseBody
-    Object fileUpload(@RequestParam("file") MultipartFile file, HttpServletResponse response){
+    Object fileUpload(@RequestParam("file") MultipartFile file){
         String realPath = "";
         try {
             String originalFilename = file.getOriginalFilename();
@@ -47,7 +44,6 @@ public class FileUploadController extends BaseController{
         } catch (Exception e) {
             buildErrJson("图片上传失败");
         }
-        response.setHeader("X-Frame-Options", "SAMEORIGIN");// 解决IFrame拒绝的问题
         //返回json
         return buildSuccJson(realPath);
     }

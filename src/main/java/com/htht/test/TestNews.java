@@ -37,16 +37,5 @@ public class TestNews {
         System.out.println(newsList);
     }
 
-    @Test
-    public void test(){
-        try {
-            File file = ResourceUtils.getFile("classpath:homepagetext.txt");
 
-
-            System.out.println(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-    }
 }
