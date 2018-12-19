@@ -57,7 +57,7 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     keepAlive: true
     minEvictableIdleTimeMillis: 60000
-    validationQuery: "SELECT 'x' FROM DUAL"
+    validationQuery: "SELECT 'x'"
     testWhileIdle: true
     filters: "stat"
 
